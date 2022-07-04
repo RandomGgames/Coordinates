@@ -1,0 +1,13 @@
+{
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:reference",
+			"name": "coordinates:holding_compass"
+		},
+		{
+			"condition": "minecraft:reference",
+			"name": "coordinates:holding_map"
+		}
+	]
+}
