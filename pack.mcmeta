@@ -1,6 +1,6 @@
 {
 	"pack": {
-	"pack_format": 10,
-	"description": "RandomGgames' Coordinates Data Pack"
+		"pack_format": 10,
+		"description": "Shows your coordinates above your hotbar. Created by RandomGgames."
 	}
 }
