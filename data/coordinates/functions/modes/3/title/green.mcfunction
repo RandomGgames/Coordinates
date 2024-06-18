@@ -1,1 +1,0 @@
-execute as @s run title @s actionbar [{"text":"< x:","color":"green"},{"score":{"objective":"RAN.CoordX","name":"@s"}},{"text":" y:"},{"score":{"objective":"RAN.CoordY","name":"@s"}},{"text":" z:"},{"score":{"objective":"RAN.CoordZ","name":"@s"}},{"text":" >"}]

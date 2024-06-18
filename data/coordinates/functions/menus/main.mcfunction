@@ -1,2 +1,0 @@
-#Main menu
-tellraw @s ["",{"text":"\nRandomGgames Coordinates Control Panel\n","color":"gold","bold":"true"},{"text":"[","color":"aqua"},{"text":"Power","color":"gray","clickEvent":{"action":"run_command","value":"/trigger Coordinates set 2"}},{"text":"]   [","color":"aqua"},{"text":"Modes","color":"gray","clickEvent":{"action":"run_command","value":"/trigger Coordinates set 3"}},{"text":"]   [","color":"aqua"},{"text":"Color","color":"gray","clickEvent":{"action":"run_command","value":"/trigger Coordinates set 4"}},{"text":"]\n","color":"aqua"}]
