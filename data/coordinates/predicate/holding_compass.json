@@ -1,5 +1,5 @@
 {
-	"condition": "minecraft:alternative",
+	"condition": "minecraft:any_of",
 	"terms": [
 		{
 			"condition": "minecraft:entity_properties",
@@ -7,9 +7,7 @@
 			"predicate": {
 				"equipment": {
 					"offhand": {
-						"items": [
-							"minecraft:compass"
-						]
+						"items": "minecraft:compass"
 					}
 				}
 			}
@@ -20,9 +18,7 @@
 			"predicate": {
 				"equipment": {
 					"mainhand": {
-						"items": [
-							"minecraft:compass"
-						]
+						"items": "minecraft:compass"
 					}
 				}
 			}

@@ -1,5 +1,5 @@
 {
-	"condition": "minecraft:alternative",
+	"condition": "minecraft:any_of",
 	"terms": [
 		{
 			"condition": "minecraft:entity_properties",
@@ -7,9 +7,18 @@
 			"predicate": {
 				"equipment": {
 					"offhand": {
-						"items": [
-							"minecraft:filled_map"
-						]
+						"items": "minecraft:map"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"equipment": {
+					"mainhand": {
+						"items": "minecraft:map"
 					}
 				}
 			}
@@ -20,9 +29,7 @@
 			"predicate": {
 				"equipment": {
 					"offhand": {
-						"items": [
-							"minecraft:map"
-						]
+						"items": "minecraft:filled_map"
 					}
 				}
 			}
@@ -33,22 +40,7 @@
 			"predicate": {
 				"equipment": {
 					"mainhand": {
-						"items": [
-							"minecraft:filled_map"
-						]
-					}
-				}
-			}
-		},
-		{
-			"condition": "minecraft:entity_properties",
-			"entity": "this",
-			"predicate": {
-				"equipment": {
-					"mainhand": {
-						"items": [
-							"minecraft:map"
-						]
+						"items": "minecraft:filled_map"
 					}
 				}
 			}
