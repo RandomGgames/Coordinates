@@ -22,6 +22,28 @@
 					}
 				}
 			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"equipment": {
+					"offhand": {
+						"items": "minecraft:recovery_compass"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:entity_properties",
+			"entity": "this",
+			"predicate": {
+				"equipment": {
+					"mainhand": {
+						"items": "minecraft:recovery_compass"
+					}
+				}
+			}
 		}
 	]
 }
