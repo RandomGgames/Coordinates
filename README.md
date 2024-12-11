@@ -1,22 +1,33 @@
-### What is this?
-This is a Minecraft data pack that allows you to display your coordaintes above your hotbar.
+# Coordinates
 
-To activate the display, open the menu in chat by using the command `/trigger Coordinates`. Use your mouse to then click the `[Power]` button and choose an option. This is also how the rest of the menus are navigated and colors/style can also be selected.
+Want to see your coordiantes above your hotbar? Don't want to use mods? I've the perfect solution!
 
-![Jungle-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/50f3d782-f6cf-407c-a50a-477e06707190) ![Cave-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c4fb912a-40dc-4586-8d10-43f1ce29e753)
+Coordinates is a Minecraft data pack that allows you to display your coordaintes above your hotbar.
+
+![Jungle-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/50f3d782-f6cf-407c-a50a-477e06707190)
+
+## Features
+- Per player settings
+- View coordinates and optionally facing direction above hotbar
+- Color customizable
+- Style customizable
+- Easy to navigate menu
+
+## How to use
+
+- Open the menu by using the command `/trigger Coordinates`.
+- Using your mouse to then click the `[Power]`, `[Mode]`, or `[Color]` buttons to access that page. From there, you can change when the coordinates are displayed, what color the text is, and the style your coordinates are shown as.
+
+## Control Panel
 
 ### Main Menu
-
-![2024-12-08_16 07 23](https://github.com/user-attachments/assets/31db3687-7c3e-4dd3-8b3e-b8a698486a46)
+![2024-12-11_18 29 02](https://github.com/user-attachments/assets/8a5966a7-5599-4f58-be50-1a68940bc33b)
 
 ### Color Menu
-
-![2024-12-08_16 08 10](https://github.com/user-attachments/assets/80be8131-03f1-4ad7-8080-31892a0de6db)
+![2024-12-11_18 29 34](https://github.com/user-attachments/assets/c13628e8-10f1-4a88-a76c-a0f16cdf1af1)
 
 ### Mode Menu
-
-![2024-12-08_16 07 58](https://github.com/user-attachments/assets/4dc31583-fd61-4a77-8096-441b1b52a323)
+![2024-12-11_18 29 21](https://github.com/user-attachments/assets/5a74a0c2-38cf-4495-841a-458eef3a15e7)
 
 ### Power Menu
-
-![2024-12-08_16 07 49](https://github.com/user-attachments/assets/9e9fcaa7-91d1-4f15-b201-07e95f29a70a)
+![2024-12-11_18 29 13](https://github.com/user-attachments/assets/1dd90794-a35e-42a3-9ac2-4b5aa1928eaa)
