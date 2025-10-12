@@ -1,6 +1,10 @@
 {
 	"pack": {
-		"pack_format": 61,
-		"description": "Shows your coordinates above your hotbar. Created by RandomGgames."
+		"description": "Shows your coordinates above your hotbar. Created by RandomGgames.",
+		"pack_format": 88,
+		"supported_formats": [
+			48,
+			88
+		]
 	}
 }
