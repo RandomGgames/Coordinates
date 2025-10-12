@@ -1,0 +1,67 @@
+name: Create pack release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag name (e.g., v1.0.0)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  # Normalize tag once for the entire workflow
+  NORMALIZED_TAG: ${{ github.event.inputs.tag }}
+
+jobs:
+  normalize-tag:
+    name: Normalize tag
+    runs-on: ubuntu-22.04
+    outputs:
+      tag: ${{ steps.set-tag.outputs.tag }}
+    steps:
+      - id: set-tag
+        run: |
+          TAG="${{ github.event.inputs.tag }}"
+          if [[ "$TAG" != v* ]]; then
+            TAG="v$TAG"
+          fi
+          echo "Normalized tag is $TAG"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+  release:
+    needs: normalize-tag
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Zip files for release
+        run: |
+          tag="${{ needs.normalize-tag.outputs.tag }}"
+          repo_name="${GITHUB_REPOSITORY#*/}"
+          zip_name="${repo_name}-${tag#v}.zip"
+
+          # Required file
+          [ -f pack.mcmeta ] || { echo "Error: pack.mcmeta not found"; exit 1; }
+
+          # Optional folders
+          zip -r "$zip_name" pack.mcmeta || true
+          [ -d data ] && zip -r "$zip_name" data || true
+          [ -d assets ] && zip -r "$zip_name" assets || true
+          [ -f pack.png ] && zip -u "$zip_name" pack.png || true
+
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="${{ needs.normalize-tag.outputs.tag }}"
+          repo_name="${GITHUB_REPOSITORY#*/}"
+
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${repo_name} v${tag#v}" \
+              --generate-notes \
+              "$repo_name-${tag#v}.zip"
