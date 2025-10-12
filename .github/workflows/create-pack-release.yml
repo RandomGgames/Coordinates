@@ -7,6 +7,10 @@ on:
         description: "Tag name (e.g., v1.0.0)"
         required: true
         type: string
+      versions:
+        description: 'Game versions (e.g., 1.21.5 or 1.21-1.21.10'
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -59,9 +63,10 @@ jobs:
         run: |
           tag="${{ needs.normalize-tag.outputs.tag }}"
           repo_name="${GITHUB_REPOSITORY#*/}"
+          game_versions="${{ github.event.inputs.versions }}"
 
           gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
-              --title="${repo_name} v${tag#v}" \
+              --title="${repo_name} v${tag#v} for ${game_versions}" \
               --generate-notes \
               "$repo_name-${tag#v}.zip"
