@@ -22,10 +22,13 @@
         "Pack Format 94.1 = 1.21.11"
     ],
     "pack": {
-        "pack_format": 94.1,
-        "supported_formats": [
-            48,
-            94.1
+        "min_format": [
+            82,
+            0
+        ],
+        "max_format": [
+            94,
+            1
         ],
         "description": [
             {
