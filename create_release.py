@@ -28,8 +28,8 @@ logger.setLevel(logging.DEBUG)
 
 @dataclass
 class ScriptSettings:
-    pack_name = "Load-Breaking"
-    pack_version = "1.1.7"
+    pack_name = "Coordinates"
+    pack_version = "1.2.1"
     game_versions = "26.1-26.1.2"
     files_to_zip = [
         Path(r"assets"),
@@ -131,7 +131,7 @@ def main(config: Config):
 
     file_name = Path(f"{pack_name}-{pack_version}.zip")
 
-    release_title = Path(f"{pack_name} {pack_version} for {game_versions}")
+    release_title = Path(f"{pack_name} v{pack_version} for {game_versions}")
     logger.debug("Release title: %s", release_title)
 
     zip_files(files=files_to_zip, zip_path=file_name)
